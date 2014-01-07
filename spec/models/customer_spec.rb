@@ -9,6 +9,8 @@ describe Customer do
   it { expect(customer).to validate_presence_of :password }
   it { expect(customer).to validate_confirmation_of :password }
   
+  it { expect(customer).to have_many :orders }
+
   it "send compare_email_password" do
     # customer.password = customer.email
     expect(customer).to receive :compare_email_password

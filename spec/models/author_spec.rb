@@ -14,4 +14,5 @@ describe Author do
     it { expect(author.firstname).to eq 'Andrey' }
     it { expect(author.lastname).to eq 'Kvasin' }
   end
+  it { expect(author).to have_many :books }
 end
